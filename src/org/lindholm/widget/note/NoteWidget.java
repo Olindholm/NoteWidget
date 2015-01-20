@@ -18,10 +18,10 @@ import org.lindholm.widget.note.graphics.CloseTransition;
 
 public class NoteWidget extends Widget {
 	
-	public static final String[] COLORS = {"white", "red", "blue", "green", "teal"};
+	public static final String[] COLORS = {"grey", "pink", "red", "orange", "yellow", "green", "teal", "blue"};
 	
 	boolean pinned = true;
-	String color = "white";
+	String color = "grey";
 	
 	VBox root;
 	

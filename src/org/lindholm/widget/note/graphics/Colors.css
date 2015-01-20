@@ -1,40 +1,64 @@
 
-.white {
-	color:			#EDEDED;
-	border-color:	#BFBFBF;
-	focused-color:	#FFFFFF;
+.grey {
+	color:			#B8C4C9;
+	border-color:	#ABB6BA;
+	focused-color:	#C6CFD3;
+	
+	font-color:		#000000;
+}
+
+.pink {
+	color:			#FEC9DD;
+	border-color:	#CBA0B0;
+	focused-color:	#FECEE0;
 	
 	font-color:		#000000;
 }
 
 .red {
-	color:			#FF0000;
-	border-color:	#9B0000;
-	focused-color:	#FF6464;
+	color:			#FF6D3F;
+	border-color:	#E66238;
+	focused-color:	#FF7B51;
 	
 	font-color:		#000000;
 }
 
-.blue {
-	color:			#0026FF;
-	border-color:	#00179B;
-	focused-color:	#647BFF;
+.orange {
+	color:			#FF9B00;
+	border-color:	#E68B00;
+	focused-color:	#FFA419;
+	
+	font-color:		#000000;
+}
+
+.yellow {
+	color:			#FFDA00;
+	border-color:	#E6C400;
+	focused-color:	#FFDD19;
 	
 	font-color:		#000000;
 }
 
 .green {
-	color:			#00FF21;
-	border-color:	#009B14;
-	focused-color:	#64FF78;
+	color:			#95D641;
+	border-color:	#86C13A;
+	focused-color:	#9FDA53;
 	
 	font-color:		#000000;
 }
 
 .teal {
-	color:			#00FFD0;
-	border-color:	#009B7E;
-	focused-color:	#64FFE2;
+	color:			#1CE8B5;
+	border-color:	#19D1A3;
+	focused-color:	#32EABC;
+	
+	font-color:		#000000;
+}
+
+.blue {
+	color:			#3FC3FF;
+	border-color:	#38AFE6;
+	focused-color:	#51C8FF;
 	
 	font-color:		#000000;
 }
