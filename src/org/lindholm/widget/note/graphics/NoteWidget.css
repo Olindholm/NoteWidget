@@ -1,0 +1,215 @@
+
+ /******************************************************************************
+ *                                                                             *
+ * note				                                                           *
+ *                                                                             *
+ ******************************************************************************/
+ 
+.widget {
+	-fx-background-color: transparent;
+	
+	-fx-padding: 10;
+	-fx-spacing: 10;
+}
+
+ /******************************************************************************
+ *                                                                             *
+ * note				                                                           *
+ *                                                                             *
+ ******************************************************************************/
+ 
+.note {
+	-fx-background-color: color;
+	-fx-background-radius: 10 10 20 20;
+	
+	-fx-padding: 0 0 10 0;
+	-fx-spacing: 5;
+}
+
+ /******************************************************************************
+ *                                                                             *
+ * note-header                                                       	       *
+ *                                                                             *
+ ******************************************************************************/
+
+.note-header {
+	-fx-background-color: border-color;
+	-fx-background-radius: 10;
+	
+	-fx-padding: 5;
+	-fx-spacing: 5;
+	
+	-fx-alignment: center;
+	
+	-fx-font-size: 22;
+	-fx-font-weight: bold;
+}
+
+.note .note-header {
+	-fx-background-radius: 10 10 0 0;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * name-label                                                       	       *
+ *                                                                             *
+ ******************************************************************************/
+
+.name-label {
+	-fx-background-color: focused-color;
+	-fx-background-insets: 8;
+	-fx-background-radius: 5;
+}
+
+.note .name-label {
+	-fx-background-color: transparent;
+}
+
+.note .name-label:hover, .note .name-label:focused {
+	-fx-background-color: focused-color;
+}
+
+.item .name-label {
+	-fx-background-insets: 0;
+}
+
+.emptyDisplayLabel .text {
+	-fx-opacity: 0.5
+}
+
+.checked .text {
+	-fx-opacity: 0.5;
+	-fx-strikethrough: true;
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * item                                                       			       *
+ *                                                                             *
+ ******************************************************************************/
+
+.item {
+	-fx-padding: 0 10 0 10;
+	-fx-spacing: 5;
+	
+	-fx-alignment: center;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * item-box                                                       	       *
+ *                                                                             *
+ ******************************************************************************/
+
+.item-box .box {
+	-fx-background-color: transparent;
+	-fx-background-insets: 0;
+	-fx-background-radius: 0;
+}
+
+.item-box .box .mark {
+	-fx-background-color: transparent;
+	-fx-background-insets: 0;
+	-fx-background-radius: 0;
+}
+
+.item-box:determinate {
+	-fx-background-color: transparent;
+	-fx-background-image: url("determinate-checkbox.png");
+	-fx-background-position: center;
+	-fx-background-repeat: no-repeat;
+	-fx-background-size: 100%;
+	
+	-fx-opacity: 0.25;
+}
+
+.item-box:selected {
+	-fx-background-image: url("selected-checkbox.png");
+}
+
+.item-box:hover, .item-box:focused {
+	-fx-opacity: 1;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * close-button                                                               *
+ *                                                                             *
+ ******************************************************************************/
+ 
+.close-button {
+	-fx-background-color: transparent;
+	-fx-background-image: url("close-button.png");
+	-fx-background-position: center;
+	-fx-background-repeat: no-repeat;
+	-fx-background-size: 100%;
+	
+	-fx-opacity: 0.25;
+}
+
+.close-button:hover, .close-button:focused {
+	-fx-opacity: 1;
+}
+
+.pin-button {
+	-fx-background-color: transparent;
+	-fx-background-image: url("unpinned-button.png");
+	-fx-background-position: center;
+	-fx-background-repeat: no-repeat;
+	-fx-background-size: 100%;
+	
+	-fx-opacity: 0.25;
+}
+
+.pin-button:hover, .pin-button:focused {
+	-fx-opacity: 1;
+}
+
+.pin-button:selected {
+	-fx-background-image: url("pinned-button.png");
+}
+
+.color-picker {
+	-fx-background-color: transparent;
+	-fx-background-image: url("paint-roller.png");
+	-fx-background-position: center;
+	-fx-background-repeat: no-repeat;
+	-fx-background-size: 75%;
+	
+	-fx-opacity: 0.25;
+}
+
+.color-picker .arrow, .color-picker .arrow-button {
+	-fx-background-color: transparent;
+	-fx-background-insets: 0;
+	-fx-background-radius: 0;
+}
+
+.color-picker:hover, .color-picker:focused {
+	-fx-opacity: 1;
+}
+
+.color-picker .list-cell {
+	-fx-background-color: transparent;
+}
+
+.color-picker .list-view {
+	-fx-background-color: border-color;
+	-fx-background-radius: 0 0 10 10;
+	
+	-fx-padding: 5;
+	-fx-spacing: 5;
+}
+
+.color-picker .list-view .list-cell {
+	-fx-background-color: color;
+	-fx-background-insets: 3;
+	-fx-background-radius: 10;
+}
+
+.color-picker .list-view .list-cell:hover {
+	-fx-border-color: black;
+	-fx-border-radius: 10;
+	-fx-border-width: 3;
+}

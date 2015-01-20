@@ -1,0 +1,40 @@
+
+.white {
+	color:			#EDEDED;
+	border-color:	#BFBFBF;
+	focused-color:	#FFFFFF;
+	
+	font-color:		#000000;
+}
+
+.red {
+	color:			#FF0000;
+	border-color:	#9B0000;
+	focused-color:	#FF6464;
+	
+	font-color:		#000000;
+}
+
+.blue {
+	color:			#0026FF;
+	border-color:	#00179B;
+	focused-color:	#647BFF;
+	
+	font-color:		#000000;
+}
+
+.green {
+	color:			#00FF21;
+	border-color:	#009B14;
+	focused-color:	#64FF78;
+	
+	font-color:		#000000;
+}
+
+.teal {
+	color:			#00FFD0;
+	border-color:	#009B7E;
+	focused-color:	#64FFE2;
+	
+	font-color:		#000000;
+}
