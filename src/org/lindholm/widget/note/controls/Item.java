@@ -76,6 +76,13 @@ public class Item extends HBox {
 		super.getChildren().addAll(checkbox, nameField, closeButton);
 	}
 	
+	public boolean isChecked() {
+		return checked;
+	}
+	public String getName() {
+		return name;
+	}
+	
 	public void setOnAction(EventHandler<ActionEvent> actionHandler) {
 		this.actionHandler = actionHandler;
 	}

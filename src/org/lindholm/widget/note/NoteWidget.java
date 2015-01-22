@@ -20,13 +20,15 @@ public class NoteWidget extends Widget {
 	
 	public static final String[] COLORS = {"grey", "pink", "red", "orange", "yellow", "green", "teal", "blue"};
 	
-	boolean pinned = true;
-	String color = "grey";
+	boolean pinned;
+	String color;
 	
 	VBox root;
 	
-	public NoteWidget(Stage primaryStage) {
+	public NoteWidget(Stage primaryStage, boolean pinned, String color) {
 		super(primaryStage);
+		this.pinned = pinned;
+		this.color = color;
 		
 		root = new VBox();
 		root.getStyleClass().add("widget");
@@ -39,7 +41,6 @@ public class NoteWidget extends Widget {
 		
 		buildInterface();
 		initStage(scene);
-		stage.show();
 	}
 	
 	void buildInterface() {
@@ -67,7 +68,7 @@ public class NoteWidget extends Widget {
 						
 				if (!label.isEmpty()) {
 					addNoteField.setText("");
-					addNote(label);
+					addNote(label, color);
 				}
 			}
 			
@@ -96,6 +97,7 @@ public class NoteWidget extends Widget {
 			@Override
 			public void handle(ActionEvent event) {
 				stage.setAlwaysOnTop(!stage.alwaysOnTopProperty().getValue());
+				pinned = stage.isAlwaysOnTop();
 			}
 		});
 		
@@ -121,7 +123,14 @@ public class NoteWidget extends Widget {
 		stage.setY(0);
 	}
 	
-	public Note addNote(String name) {
+	public boolean isPinned() {
+		return pinned;
+	}
+	public String getColor() {
+		return color;
+	}
+	
+	public Note addNote(String name, String color) {
 		ObservableList<Node> children = root.getChildren();
 		
 		Note note = new Note(name, color);
@@ -138,8 +147,14 @@ public class NoteWidget extends Widget {
 		
 		return note;
 	}
+	public Note[] getNotes() {
+		ObservableList<Node> children = root.getChildren();
+		
+		return children.subList(1, children.size()).toArray(new Note[children.size() - 1]);
+	}
 	
-	void close() {
+	@Override
+	public void close() {
 		CloseTransition transition = new CloseTransition(root, new EventHandler<ActionEvent>() {
 			
 			@Override

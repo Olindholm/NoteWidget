@@ -1,8 +1,11 @@
 package org.lindholm.widget;
 
+import javafx.event.*;
 import javafx.stage.*;
 
-public class Widget {
+public abstract class Widget {
+	
+	EventHandler<ActionEvent> closeHandler;
 	
 	protected Stage stage;
 	
@@ -17,6 +20,10 @@ public class Widget {
 			
 			@Override
 			public void close() {
+				if (closeHandler != null) {
+					closeHandler.handle(new ActionEvent(this, null));
+				}
+				
 				super.close();
 				primaryStage.close();
 			}
@@ -25,5 +32,14 @@ public class Widget {
 		stage.initOwner(primaryStage);
 	}
 	
+	public void setOnClose(EventHandler<ActionEvent> closeHandler) {
+		this.closeHandler = closeHandler;
+	}
+	
+	public void show() {
+		stage.show();
+	}
+	
+	public abstract void close();
 	
 }

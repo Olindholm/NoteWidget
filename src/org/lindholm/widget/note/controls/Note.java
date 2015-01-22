@@ -109,7 +109,7 @@ public class Note extends VBox {
 				String label = addItemField.getText();
 						
 				if (!label.isEmpty()) {
-					addItem(label);
+					addItem(label, false);
 					addItemField.setText("");
 				}
 			}
@@ -120,14 +120,21 @@ public class Note extends VBox {
 		super.getChildren().add(hBox);
 	}
 	
+	public String getName() {
+		return name;
+	}
+	public String getColor() {
+		return color;
+	}
+	
 	public void setOnAction(EventHandler<ActionEvent> actionHandler) {
 		this.actionHandler = actionHandler;
 	}
 	
-	public Item addItem(String name) {
+	public Item addItem(String name, boolean checked) {
 		ObservableList<Node> children = super.getChildren();
 		
-		Item item = new Item(name, false);
+		Item item = new Item(name, checked);
 		item.setOnAction(new EventHandler<ActionEvent>() {
 			
 			@Override
@@ -139,6 +146,11 @@ public class Note extends VBox {
 		children.add(children.size() - 1, item);
 		
 		return item;
+	}
+	public Item[] getItems() {
+		ObservableList<Node> children = super.getChildren();
+		
+		return children.subList(1, children.size() - 1).toArray(new Item[children.size() - 2]);
 	}
 	
 	public void close() {
