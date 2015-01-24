@@ -29,6 +29,15 @@ public abstract class Widget {
 			}
 			
 		};
+		stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+			@Override
+			public void handle(WindowEvent event) {
+				
+				// Consume event, and do nothing.
+				event.consume();
+				
+			}
+		});
 		stage.initOwner(primaryStage);
 	}
 	

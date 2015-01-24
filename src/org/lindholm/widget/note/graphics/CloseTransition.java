@@ -1,6 +1,5 @@
 package org.lindholm.widget.note.graphics;
 
-
 import javafx.animation.*;
 import javafx.event.*;
 import javafx.scene.layout.*;
