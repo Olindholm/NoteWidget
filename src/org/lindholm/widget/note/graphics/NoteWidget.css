@@ -49,6 +49,11 @@
 	-fx-background-radius: 10 10 0 0;
 }
 
+.note-header .context-menu {
+	-fx-font-size: 12;
+	-fx-font-weight: normal;
+}
+
 /*******************************************************************************
  *                                                                             *
  * name-label                                                       	       *
@@ -56,17 +61,21 @@
  ******************************************************************************/
 
 .name-label {
-	-fx-background-color: focused-color;
-	-fx-background-insets: 8;
+	-fx-background-color: transparent;
 	-fx-background-radius: 5;
 }
 
-.note .name-label {
-	-fx-background-color: transparent;
+.name-label:hover, .name-label:focused {
+	-fx-background-color: focused-color;
 }
 
-.note .name-label:hover, .note .name-label:focused {
+.note-header .name-label {
 	-fx-background-color: focused-color;
+	-fx-background-insets: 8;
+}
+
+.note .note-header .name-label {
+	-fx-background-color: transparent;
 }
 
 .item .name-label {

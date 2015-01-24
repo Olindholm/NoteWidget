@@ -54,7 +54,6 @@ public class Note extends VBox {
 			
 		});
 		
-		
 		ColorPicker colorBox = new ColorPicker(NoteWidget.COLORS, color);
 		colorBox.getStyleClass().add("color-picker");
 		colorBox.valueProperty().addListener(new ChangeListener<String>() {
