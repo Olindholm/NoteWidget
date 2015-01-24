@@ -30,7 +30,7 @@ public class NoteWidgetFactory {
 		
 		// note element(s)
 		NodeList notes = widgetElement.getChildNodes();
-		for (int i = 0; i < notes.getLength(); i++) {
+		for (int i = notes.getLength() - 1; i >= 0; i--) {
 			Node noteNode = notes.item(i);
 			
 			if (noteNode.getNodeType() == Node.ELEMENT_NODE) {
