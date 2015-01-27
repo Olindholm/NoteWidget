@@ -46,6 +46,7 @@ public class Main extends Application {
 			}
 			
 		});
+		widget.requestFocus();
 		widget.show();
 	}
 }

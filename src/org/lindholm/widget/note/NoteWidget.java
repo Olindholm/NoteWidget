@@ -24,6 +24,7 @@ public class NoteWidget extends Widget {
 	String color;
 	
 	VBox root;
+	EnchantedTextField addNoteField;
 	
 	public NoteWidget(Stage primaryStage, boolean pinned, String color) {
 		super(primaryStage);
@@ -47,7 +48,7 @@ public class NoteWidget extends Widget {
 		HBox hBox = new HBox();
 		hBox.getStyleClass().add("note-header");
 		
-		EnchantedTextField addNoteField = new EnchantedTextField();
+		addNoteField = new EnchantedTextField();
 		addNoteField.setEmptyDisplayLabel("Add note...");
 		addNoteField.getStyleClass().add("name-label");
 		addNoteField.setOnKeyPressed(new EventHandler<KeyEvent>() {
@@ -164,6 +165,10 @@ public class NoteWidget extends Widget {
 			
 		});
 		transition.play();
+	}
+	
+	public void requestFocus() {
+		addNoteField.requestFocus();
 	}
 	
 }

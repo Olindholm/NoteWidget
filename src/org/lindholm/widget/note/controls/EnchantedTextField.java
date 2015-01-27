@@ -11,6 +11,7 @@ public class EnchantedTextField extends TextField {
 	String emptyDisplayLabel = "";
 	
 	public EnchantedTextField() {
+		super.getStyleClass().add("emptyDisplayLabel");
 		
 		textProperty().addListener(new ChangeListener<String>() {
 			
@@ -30,6 +31,7 @@ public class EnchantedTextField extends TextField {
 			
 		});
 		
+		
 	}
 	
 	public void setAllowedEmpty(boolean allowedEmpty) {
@@ -40,6 +42,10 @@ public class EnchantedTextField extends TextField {
 	}
 	
 	public void setEmptyDisplayLabel(String emptyDisplayLabel) {
+		if (super.getText().equals(this.emptyDisplayLabel)) {
+			super.setText(emptyDisplayLabel);
+		}
+		
 		this.emptyDisplayLabel = emptyDisplayLabel;
 	}
 	public String getEmptyDisplayLabel() {
