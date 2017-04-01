@@ -1,3 +1,7 @@
+/* 
+ * Copyright 2017 (C) Wiggy boy <Lindholm>
+ * (formally known as Osvald Lindholm)
+ */
 package org.lindholm.widget.note.controls;
 
 import org.lindholm.widget.note.NoteWidget;
@@ -8,8 +12,7 @@ import javafx.scene.*;
 import javafx.scene.control.*;
 import javafx.scene.input.*;
 import javafx.scene.layout.*;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
+import javafx.beans.value.*;
 import javafx.collections.*;
 
 public class Note extends VBox {

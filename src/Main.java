@@ -1,7 +1,10 @@
+/* 
+ * Copyright 2017 (C) Wiggy boy <Lindholm>
+ * (formally known as Osvald Lindholm)
+ */
 import java.io.File;
 
-import org.lindholm.widget.note.NoteWidget;
-import org.lindholm.widget.note.NoteWidgetFactory;
+import org.lindholm.widget.note.*;
 
 import javafx.application.Application;
 import javafx.stage.Stage;

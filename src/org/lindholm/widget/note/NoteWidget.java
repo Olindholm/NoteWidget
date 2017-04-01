@@ -1,3 +1,7 @@
+/* 
+ * Copyright 2017 (C) Wiggy boy <Lindholm>
+ * (formally known as Osvald Lindholm)
+ */
 package org.lindholm.widget.note;
 
 import javafx.event.*;
@@ -7,8 +11,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.control.*;
 import javafx.scene.input.*;
 import javafx.scene.layout.*;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
+import javafx.beans.value.*;
 import javafx.collections.*;
 
 import org.lindholm.widget.Widget;

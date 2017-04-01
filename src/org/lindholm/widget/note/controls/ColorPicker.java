@@ -1,3 +1,7 @@
+/* 
+ * Copyright 2017 (C) Wiggy boy <Lindholm>
+ * (formally known as Osvald Lindholm)
+ */
 package org.lindholm.widget.note.controls;
 
 import javafx.geometry.Orientation;
